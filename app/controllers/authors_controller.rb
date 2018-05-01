@@ -6,6 +6,7 @@ class AuthorsController < ApplicationController
   def new
   end
 
+  #my solution
   def create
     @author = Author.new(author_params)
     if @author.valid?
@@ -15,7 +16,16 @@ class AuthorsController < ApplicationController
       render :new
     end
   end
-
+  #learns solution
+ #  def create
+    # author = Author.new(author_params)
+ #
+ #   if @author.save
+ #     redirect_to author_path(@author)
+ #   else
+ #     render :new
+ #   end
+ # end
   private
 
   def author_params
